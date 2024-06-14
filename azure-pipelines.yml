@@ -3,6 +3,10 @@
    trigger:
      - master
    steps:
+     - task: NodeTool@0
+       inputs:
+        versionSource: 'spec'
+        versionSpec: '16.x'
      - task: CopyFiles@2
        displayName: 'Copy Files to: $(build.artifactstagingdirectory)/Templates'
        inputs:
